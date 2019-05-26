@@ -1,0 +1,19 @@
+newmtl cover2
+Ka 0 0 0
+Kd 0.83693 0.833648 0.828307
+Ks 0.05 0.05 0.05
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd Book_Cover.jpg
+
+newmtl pages2
+Ka 0 0 0
+Kd 0.980152 0.968039 0.927167
+Ks 0.05 0.05 0.05
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
