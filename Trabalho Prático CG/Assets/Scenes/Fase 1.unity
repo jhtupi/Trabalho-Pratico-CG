@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950032, g: 0.49649626, b: 0.55914444, a: 1}
+  m_IndirectSpecularColor: {r: 0.44949996, g: 0.49649584, b: 0.55914426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -507,7 +507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fase1: {fileID: 571070082}
-  fase2: {fileID: 0}
+  fase2: {fileID: 748664101}
+  boundary: {fileID: 432999620}
+  self: {fileID: 436957266}
   distancia: 300
 --- !u!65 &436957268
 BoxCollider:
@@ -531,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 436957266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.5, z: 159.4}
-  m_LocalScale: {x: 12, y: 14, z: 50}
+  m_LocalScale: {x: 12, y: 14, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -880,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 7
+  scrollSpeed: 10
 --- !u!1 &571070082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4919538708147052176, guid: 40bc6ac74f2596141a8aee16a5b528bb,
@@ -917,6 +919,12 @@ Transform:
   m_Father: {fileID: 1367559888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &748664101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4919538708147052176, guid: 40bc6ac74f2596141a8aee16a5b528bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 154972399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &858713455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 30
+  scrollSpeed: 10
 --- !u!54 &1367559886
 Rigidbody:
   m_ObjectHideFlags: 0

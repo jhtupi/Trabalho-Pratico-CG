@@ -7,7 +7,7 @@ public class DestroyByBoundary : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && this.tag == "Boundary")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
         }
