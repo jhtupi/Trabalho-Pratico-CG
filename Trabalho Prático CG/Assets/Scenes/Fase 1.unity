@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 196653030}
   - component: {fileID: 196653029}
   m_Layer: 5
-  m_Name: text
+  m_Name: score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1286,6 +1286,9 @@ MonoBehaviour:
   shot: {fileID: 1606934778759494453, guid: 051aa52c67d931041a99ffbb60e151af, type: 3}
   shotSpawn: {fileID: 631819706}
   fireRate: 0.25
+  scoreText: {fileID: 196653029}
+  restartText: {fileID: 858713457}
+  gameOverText: {fileID: 1607590011}
 --- !u!114 &1367559885
 MonoBehaviour:
   m_ObjectHideFlags: 0
