@@ -913,7 +913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631819705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.020357389}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0348}
   m_LocalScale: {x: 0.035614744, y: 0.035614744, z: 0.035614744}
   m_Children: []
   m_Father: {fileID: 1367559888}
@@ -1278,10 +1278,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   boundary:
-    xMin: -2.5
-    xMax: 2.5
+    xMin: -3
+    xMax: 3
     yMin: 2
-    yMax: 6
+    yMax: 7
   tilt: 5
   shot: {fileID: 1606934778759494453, guid: 051aa52c67d931041a99ffbb60e151af, type: 3}
   shotSpawn: {fileID: 631819706}

@@ -62,19 +62,22 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        GetComponent<Rigidbody>().freezeRotation = true;
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
         GetComponent<Rigidbody>().velocity = movement*speed;
 
-        /*GetComponent<Rigidbody>().position = new Vector3
+        GetComponent<Rigidbody>().position = new Vector3
         (
             Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax),
             Mathf.Clamp(GetComponent<Rigidbody>().position.y, boundary.yMin, boundary.yMax),
-            1.0f
-            
-        );*/
+            GetComponent<Rigidbody>().position.z
+
+
+        );
 
         if(moveHorizontal != 0)
         {
