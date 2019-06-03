@@ -1278,10 +1278,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   boundary:
-    xMin: -2.5
-    xMax: 2.5
+    xMin: -3
+    xMax: 3
     yMin: 2
-    yMax: 3
+    yMax: 7
   tilt: 5
   shot: {fileID: 1606934778759494453, guid: 051aa52c67d931041a99ffbb60e151af, type: 3}
   shotSpawn: {fileID: 631819706}
