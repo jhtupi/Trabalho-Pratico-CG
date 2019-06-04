@@ -38,8 +38,8 @@ public class Done_EvasiveManeuver : MonoBehaviour
 		GetComponent<Rigidbody>().velocity = new Vector3 (newManeuver, 0.0f, currentSpeed);
 		GetComponent<Rigidbody>().position = new Vector3
 		(
-			Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax), 
-			0.0f, 
+			Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax),
+            GetComponent<Rigidbody>().position.y, 
 			Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
 		);
 		
