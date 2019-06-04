@@ -10,8 +10,10 @@ public class DestroyByBoundary : MonoBehaviour
         if (other.tag == "Player" && this.tag == "Boundary")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+            
         }
 
         Destroy(other.gameObject);
+
     }
 }

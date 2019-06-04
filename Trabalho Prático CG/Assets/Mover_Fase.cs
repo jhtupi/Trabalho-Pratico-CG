@@ -12,18 +12,23 @@ public class Mover_Fase : MonoBehaviour
     {
         flagFase = 1;    
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(flagFase == 1)
+        if (other.tag == "Player")
         {
-            fase1.transform.position = new Vector3(fase1.GetComponent<Transform>().position.x, fase1.GetComponent<Transform>().position.y, fase1.GetComponent<Transform>().position.z + distancia);
-            moverObjetos();
-            flagFase = 0;
-        } else
-        {
-            fase2.transform.position = new Vector3(fase2.GetComponent<Transform>().position.x, fase2.GetComponent<Transform>().position.y, fase2.GetComponent<Transform>().position.z + distancia);
-            flagFase = 1;
-            moverObjetos();
+            if (flagFase == 1)
+            {
+                fase1.transform.position = new Vector3(fase1.GetComponent<Transform>().position.x, fase1.GetComponent<Transform>().position.y, fase1.GetComponent<Transform>().position.z + distancia);
+                moverObjetos();
+                flagFase = 0;
+            }
+            else
+            {
+                fase2.transform.position = new Vector3(fase2.GetComponent<Transform>().position.x, fase2.GetComponent<Transform>().position.y, fase2.GetComponent<Transform>().position.z + distancia);
+                flagFase = 1;
+                moverObjetos();
+            }
         }
     }
     private void moverObjetos()
