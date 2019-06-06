@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7914951238075050353}
   - component: {fileID: 2171360764918702714}
   - component: {fileID: 8296172669072399461}
+  - component: {fileID: 1041505711}
   m_Layer: 0
   m_Name: Inimigo 1
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2231079659052940998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 346af2d3f49c6ac47a13206ae6027592, type: 3}
   m_Name: 
@@ -94,12 +95,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2231079659052940998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9665db6720db4f54a82349fdc8fc5c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 10
+--- !u!114 &1041505711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231079659052940998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9cc0f6086817e4eab47dba4f93e0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 5819454829385084749, guid: c1578b6465ed24b4984f708fb81ecb59,
+    type: 3}
+  playerExplosion: {fileID: 840353528938886789, guid: 28c9560bc68ed494c90b1a5939bb99d5,
+    type: 3}
+  self: {fileID: 2231079659052940998}
 --- !u!1 &5690906772073339739
 GameObject:
   m_ObjectHideFlags: 0
