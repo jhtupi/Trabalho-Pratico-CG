@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject hazard;
-    public Vector3 spawnValues;
-    public int hazardCount;
+    public GameObject enemy1;
+    public GameObject enemy2;
+    public GameObject self;
+    public float spawnValuesX;
+    public int enemyCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    private float flagEnemy;
 
 
     private void Start()
@@ -21,11 +24,20 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (true)
         {
-            for (int i = 0; i < hazardCount; i++)
+            for (int i = 0; i < enemyCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                flagEnemy = Random.Range(0, 100); // Determina qual inimigo irá dar spawn
+                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValuesX, spawnValuesX), self.transform.position.y, self.transform.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
+                if (flagEnemy >= 50) // Inimigo 1
+                {
+                    Instantiate(enemy1, spawnPosition, spawnRotation);
+                }
+                else // Inimigo 2
+                {
+                    Instantiate(enemy2, spawnPosition, spawnRotation);
+                }
+                
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
