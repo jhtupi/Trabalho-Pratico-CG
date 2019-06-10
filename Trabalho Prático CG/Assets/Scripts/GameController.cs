@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -17,6 +19,13 @@ public class GameController : MonoBehaviour
     public float waveWait;
     private float flagEnemy;
 
+    public Text scoreText;
+    public Text restartText;
+    public Text gameOverText;
+
+    private bool gameOver;
+    private bool restart;
+    private int score;
 
     private void Start()
     {
@@ -24,7 +33,31 @@ public class GameController : MonoBehaviour
         StartCoroutine(SpawnChest());
         StartCoroutine(SpawnWaves());
 
+
+
+        gameOver = false;
+        restart = false;
+        restartText.text = "";
+        gameOverText.text = "";
+        score = 0;
+        UpdateScore();
+
     }
+
+
+
+    private void Update()
+    {
+        if (restart)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
+
+
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
@@ -50,9 +83,33 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+
+            if (gameOver)
+            {
+                restartText.text = "Pressione 'R' para reiniciar";
+                restart = true;
+                break;
+            }
         }
-        
-        
+
+    }
+
+
+    public void AddScore(int newScoreValue)
+    {
+        score += newScoreValue;
+        UpdateScore();
+    }
+
+    void UpdateScore()
+    {
+        scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.text = "Game Over!";
+        gameOver = true;
     }
 
     IEnumerator SpawnChest()

@@ -22,24 +22,6 @@ public class PlayerController : MonoBehaviour
 
     private float nextFire;
 
-    public Text scoreText;
-    public Text restartText;
-    public Text gameOverText;
-
-    private bool gameOver;
-    private bool restart;
-    private int score;
-
-    void Start()
-    {
-        gameOver = false;
-        restart = false;
-        restartText.text = "";
-        gameOverText.text = "";
-        score = 0;
-        UpdateScore();
-    }
-
 
     void Update()
     {        
@@ -51,13 +33,7 @@ public class PlayerController : MonoBehaviour
             //GetComponent<AudioSource>().Play();
         }
 
-        if (restart)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
+        
     }
 
     void FixedUpdate()
@@ -89,29 +65,7 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody>().rotation = Quaternion.Euler(GetComponent<Rigidbody>().velocity.y * -tilt, 0.0f, 0.0f);
         }
 
-        if (gameOver)
-        {
-            restartText.text = "Press 'R' for Restart";
-            restart = true;
-        } //conciliar com os inimigos
-
-
     }
 
-    public void AddScore(int newScoreValue)
-    {
-        score += newScoreValue;
-        UpdateScore();
-    }
 
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + score;
-    }
-
-    public void GameOver()
-    {
-        gameOverText.text = "Game Over!";
-        gameOver = true;
-    }
 }
