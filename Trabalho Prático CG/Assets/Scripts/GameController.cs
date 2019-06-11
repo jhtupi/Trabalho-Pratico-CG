@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour
                 }
                 else // Inimigo 2
                 {
-// Instantiate(enemy2, spawnPosition, spawnRotation); 
+                    // Instantiate(enemy2, spawnPosition, spawnRotation); 
                 }
                 
                 yield return new WaitForSeconds(spawnWait);

@@ -9,7 +9,7 @@ public class DestroyByContact : MonoBehaviour
     public GameObject playerExplosion;
     public GameObject self;
     public int scoreValue;
-    private GameController gameController;
+    public GameController gameController;
     public Slider vida;
 
 
@@ -17,9 +17,25 @@ public class DestroyByContact : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag != "chest")
+        
+
+        if (other.tag == "Player")
         {
-                if (other.tag == "Boundary")
+            if(vida.value > 0)
+            {
+                vida.value -= 20;
+                return;
+            }
+            else
+            {
+                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                Destroy(other.gameObject);
+                gameController.GameOver();
+            }
+            
+        } else if (other.tag != "chest")
+        {
+            if (other.tag == "Boundary")
             {
                 return;
             }
@@ -29,31 +45,9 @@ public class DestroyByContact : MonoBehaviour
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            if (other.tag == "Player")
-            {
-                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                Destroy(other.gameObject);
-            }
-        
-                Destroy(other.gameObject);
-                Destroy(self);
+            Destroy(other.gameObject);
+            Destroy(self);
 
-        }
-        
-
-        if (other.tag == "Player")
-        {
-            if(vida.value > 0)
-            {
-                vida.value -= 20;
-            }
-            else
-            {
-                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                Destroy(other.gameObject);
-                gameController.GameOver();
-            }
-            
         }
 
 

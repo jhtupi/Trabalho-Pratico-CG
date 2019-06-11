@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
     private float nextFire;
 
+    void Start()
+    {
+        GetComponent<Rigidbody>().freezeRotation = true;
+    }
 
     void Update()
     {        
@@ -38,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().freezeRotation = true;
+        
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
