@@ -65,7 +65,7 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < enemyCount; i++)
             {
-                flagEnemy = Random.Range(0, 100); // Determina qual inimigo irá dar spawn
+                flagEnemy = Random.Range(50, 100); // Determina qual inimigo irá dar spawn
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValuesX, spawnValuesX), self.transform.position.y, self.transform.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
 

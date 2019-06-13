@@ -9,17 +9,19 @@ public class DestroyByContact : MonoBehaviour
     public GameObject playerExplosion;
     public GameObject self;
     public int scoreValue;
-    //public GameObject gameController;
+    public GameController gameController;
     public Slider vida;
 
 
     private void Start()
     {
-        //vida = GameObject.Find("CanvasVida").GetComponent<Slider>(); ;
+
         if (GameObject.Find("CanvasVida"))
         {
             vida = (Slider)FindObjectOfType(typeof(Slider));
         }
+
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
 
     }
 
@@ -33,6 +35,11 @@ public class DestroyByContact : MonoBehaviour
             if(vida.value > 0)
             {
                 vida.value -= 20;
+                Destroy(self);
+                if (explosion != null)
+                {
+                    Instantiate(explosion, transform.position, transform.rotation);
+                }
                 return;
             }
             else
@@ -59,8 +66,8 @@ public class DestroyByContact : MonoBehaviour
 
         }
 
-
-        //gameController.AddScore(scoreValue);
+        
+        gameController.AddScore(scoreValue);
         Destroy(other.gameObject);
         Destroy(self);
         
