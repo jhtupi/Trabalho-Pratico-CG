@@ -9,8 +9,8 @@ public class DestroyByContact : MonoBehaviour
     public GameObject playerExplosion;
     public GameObject self;
     public int scoreValue;
-    public GameController gameController;
-    public Slider vida;
+    private GameController gameController;
+    private Slider vida;
 
 
     private void Start()
@@ -46,7 +46,7 @@ public class DestroyByContact : MonoBehaviour
             {
                 Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
                 Destroy(other.gameObject);
-               // gameController.GameOver();
+                gameController.GameOver();
             }
             
         } else if (other.tag != "chest")

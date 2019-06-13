@@ -5,12 +5,18 @@ using UnityEngine;
 public class Mover_Fase : MonoBehaviour
 {
     public GameObject fase1, fase2, boundary, self;
+    private GameController gameController;
     private int flagFase;
     public float distancia;
+
+    private GameObject player, camera;
     
     private void Start()
     {
-        flagFase = 1;    
+        flagFase = 1;
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        player = GameObject.Find("Player");
+        camera = GameObject.Find("Main Camera");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +36,25 @@ public class Mover_Fase : MonoBehaviour
                 moverObjetos();
             }
         }
+
+        // Aparição do boss
+        if(gameController.GetScore() == 0)
+        {
+            StartCoroutine(AparicaoBoss());
+            gameController.Boss();
+        }
+       
+    }
+
+    IEnumerator AparicaoBoss()
+    {
+        yield return new WaitForSeconds(8);
+
+        // Para o player e a câmera
+        camera.GetComponent<PlayerScroller>().scrollSpeed = 0;
+        player.GetComponent<PlayerScroller>().scrollSpeed = 0;
+
+        // Invoca o boss
     }
     private void moverObjetos()
     {

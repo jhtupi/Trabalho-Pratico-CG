@@ -30,8 +30,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         
-        StartCoroutine(SpawnChest());
-        StartCoroutine(SpawnWaves());
+        //StartCoroutine(SpawnChest());
+        //StartCoroutine(SpawnWaves());
 
 
 
@@ -42,6 +42,12 @@ public class GameController : MonoBehaviour
         score = 0;
         UpdateScore();
 
+    }
+
+    public void Boss()
+    {
+        StopCoroutine(SpawnChest());
+        StopCoroutine(SpawnWaves());
     }
 
 
@@ -99,6 +105,11 @@ public class GameController : MonoBehaviour
     {
         score += newScoreValue;
         UpdateScore();
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 
     void UpdateScore()
