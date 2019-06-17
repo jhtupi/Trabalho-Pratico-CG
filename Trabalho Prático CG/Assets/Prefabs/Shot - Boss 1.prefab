@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 3102009965606951209}
   - component: {fileID: 3125444222573587829}
   - component: {fileID: 3125444222573587828}
-  - component: {fileID: 3125444222573587831}
+  - component: {fileID: 866355755}
   m_Layer: 0
   m_Name: Shot - Boss 1
   m_TagString: Untagged
@@ -155,7 +155,7 @@ CapsuleCollider:
   m_Height: 2.4
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3125444222573587831
+--- !u!114 &866355755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,10 +164,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3124386787588988807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca55ff717ad0b514bbbfbf176a0ac75d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f85d1cb89dbd204f82863e2df7078b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  shotSpeed: 40
+  shotDamage: 2
+  playerExplosion: {fileID: 840353528938886789, guid: 28c9560bc68ed494c90b1a5939bb99d5,
+    type: 3}
+  self: {fileID: 3124386787588988807}
 --- !u!1 &3124434741691651221
 GameObject:
   m_ObjectHideFlags: 0
