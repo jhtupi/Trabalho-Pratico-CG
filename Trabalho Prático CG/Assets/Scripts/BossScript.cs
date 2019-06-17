@@ -35,6 +35,11 @@ public class BossScript : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        
+    }
+
 
 
 
