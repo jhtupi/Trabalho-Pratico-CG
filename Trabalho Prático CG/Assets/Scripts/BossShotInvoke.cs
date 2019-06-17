@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossShot : StateMachineBehaviour
+public class BossShotInvoke : StateMachineBehaviour
 {
     public GameObject shot;
     public Transform shotSpawn;
@@ -20,8 +20,7 @@ public class BossShot : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //    
-        //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        Instantiate(shot, shotSpawn.position, shotSpawn.rotation);        
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
@@ -34,9 +33,6 @@ public class BossShot : StateMachineBehaviour
     //    
     //}
 
-    
-
-
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -44,9 +40,8 @@ public class BossShot : StateMachineBehaviour
     //}
 
     // OnStateIK is called right after Animator.OnAnimatorIK()
-    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
     //    // Implement code that sets up animation IK (inverse kinematics)
-        //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-    }
+    //}
 }
