@@ -4,7 +4,7 @@ using System.Collections;
 public class DestroyByBoundary : MonoBehaviour
 {
     public GameObject playerExplosion;
-    //private GameController gameController;
+    private GameController gameController;
 
     void OnTriggerExit(Collider other)
     {
@@ -19,7 +19,6 @@ public class DestroyByBoundary : MonoBehaviour
         }
 
         Destroy(other.gameObject);
-        
 
     }
 }
