@@ -13,9 +13,13 @@ public class DestroyByBoundary : MonoBehaviour
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             
         }
+        if(other.tag == "Boss")
+        {
+            return;
+        }
 
         Destroy(other.gameObject);
-        //gameController.GameOver();
+        
 
     }
 }

@@ -43,9 +43,9 @@ public class BossShot : MonoBehaviour
                 Destroy(other.gameObject);
                 gameController.GameOver();
             }
-
+            Destroy(self);
         }
-        Destroy(self);
+        
 
     }
 }
