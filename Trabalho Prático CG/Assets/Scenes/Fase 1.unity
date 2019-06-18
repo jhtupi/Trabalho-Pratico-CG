@@ -523,7 +523,7 @@ MonoBehaviour:
   scoreText: {fileID: 196653029}
   restartText: {fileID: 858713457}
   gameOverText: {fileID: 1607590011}
-  pontuacaoBoss: 0
+  pontuacaoBoss: 50
 --- !u!1 &196653027
 GameObject:
   m_ObjectHideFlags: 0
