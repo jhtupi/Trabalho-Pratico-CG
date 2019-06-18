@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject enemy1;
     public GameObject Chest;
-// public GameObject enemy2;
+//  public GameObject enemy2;
     public GameObject self;
     public float spawnValuesX;
     public int enemyCount;
@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text restartText;
     public Text gameOverText;
+    public int pontuacaoBoss;
 
     private bool gameOver;
     private bool restart;

@@ -13,6 +13,10 @@ public class BossShot : MonoBehaviour
     private GameController gameController;
     private Slider vida;
 
+    private void Awake()
+    {
+        GetComponent<Rigidbody>().velocity = transform.forward * shotSpeed;
+    }
     void Start()
     {
         if (GameObject.Find("CanvasVida"))
@@ -20,7 +24,7 @@ public class BossShot : MonoBehaviour
             vida = (Slider)FindObjectOfType(typeof(Slider));
         }
 
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
         GetComponent<Rigidbody>().velocity = transform.forward * shotSpeed;
     }

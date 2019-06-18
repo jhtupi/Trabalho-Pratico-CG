@@ -27,6 +27,8 @@ public class BossScript : MonoBehaviour
     private float targetManeuver;
     private float flagEvasao;
 
+    
+
     private void Start()
     {
 
@@ -35,7 +37,7 @@ public class BossScript : MonoBehaviour
             vidaPlayer = (Slider)FindObjectOfType(typeof(Slider));
         }
 
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         anim = GetComponent<Animator>();
         StartCoroutine(Evade());
 
@@ -81,22 +83,24 @@ public class BossScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
-        if (bossLife > 0)
+        if (other.tag == "Player" || other.tag == "PlayerShot")
         {
-            bossLife -= 10;
-            gameController.AddScore(scoreHit);
-            // Chama animação do Hit
-            anim.SetTrigger(Animator.StringToHash("Hit"));
-            if (bossLife <= 0)
+            if (bossLife > 0)
             {
-                gameController.AddScore(scoreKill);
-                StartCoroutine(Die()); // Animação da morte
-                                       // Chamar a função para encerrar a fase
+                bossLife -= 10;
+                gameController.AddScore(scoreHit);
+                // Chama animação do Hit
+                anim.SetTrigger(Animator.StringToHash("Hit"));
+                if (bossLife <= 0)
+                {
+                    gameController.AddScore(scoreKill);
+                    StartCoroutine(Die()); // Animação da morte
+                                           // Chamar a função para encerrar a fase
+                }
             }
+            // Boss morreu
+
+            Destroy(other.gameObject);
         }
-        // Boss morreu
-        
-        Destroy(other.gameObject);
     }
 }

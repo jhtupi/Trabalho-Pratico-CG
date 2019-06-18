@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Mover_Fase : MonoBehaviour
 {
-    public GameObject fase1, fase2, boundary, self;
+    public GameObject fase1, fase2, boundary, self, boss;
     private GameController gameController;
     private int flagFase;
     public float distancia;
+    
 
     private GameObject player, camera;
-    
+    private Vector3 posicaoBoss;
+
     private void Start()
     {
         flagFase = 1;
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
     }
@@ -38,7 +40,7 @@ public class Mover_Fase : MonoBehaviour
         }
 
         // Aparição do boss
-        if(gameController.GetScore() == 0)
+        if(gameController.GetScore() >= gameController.pontuacaoBoss)
         {
             StartCoroutine(AparicaoBoss());
             gameController.Boss();
@@ -48,13 +50,24 @@ public class Mover_Fase : MonoBehaviour
 
     IEnumerator AparicaoBoss()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(2);
 
         // Para o player e a câmera
         camera.GetComponent<PlayerScroller>().scrollSpeed = 0;
         player.GetComponent<PlayerScroller>().scrollSpeed = 0;
+        Quaternion bossRotation = Quaternion.Euler(0f, 180f, 0f);
+        posicaoBoss = new Vector3
+        (
+            player.GetComponent<Transform>().position.x - player.GetComponent<Transform>().position.x,
+            player.GetComponent<Transform>().position.y - player.GetComponent<Transform>().position.y,
+            player.GetComponent<Transform>().position.z + 11
+        );
 
         // Invoca o boss
+        yield return new WaitForSeconds(4);
+        Instantiate(boss, posicaoBoss, bossRotation);
+        //yield return 0;
+
     }
     private void moverObjetos()
     {

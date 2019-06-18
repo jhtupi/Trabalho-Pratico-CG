@@ -24,8 +24,10 @@ public class BossShotInvoke : StateMachineBehaviour
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-      //  Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
     }
+
+    
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

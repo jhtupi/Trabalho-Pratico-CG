@@ -220,6 +220,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
+      propertyPath: m_Name
+      value: grocery_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.3
@@ -275,10 +279,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.5824
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
-      propertyPath: m_Name
-      value: grocery_store_mobile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
@@ -445,6 +445,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
+      propertyPath: m_Name
+      value: computer_store_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b454902af51c4741a734bf771144217, type: 3}
       propertyPath: m_LocalPosition.x
       value: 116.4
@@ -501,10 +505,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.5477035
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
-      propertyPath: m_Name
-      value: computer_store_mobile (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
 --- !u!4 &7779965519819032689 stripped
@@ -520,6 +520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
+      propertyPath: m_Name
+      value: sport_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2045e42716953924190db43bc47c0353, type: 3}
       propertyPath: m_LocalPosition.x
       value: 91.7
@@ -576,10 +580,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.5087
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
-      propertyPath: m_Name
-      value: sport_store_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
 --- !u!4 &7779965520004124026 stripped
@@ -595,6 +595,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
+      propertyPath: m_Name
+      value: parlament_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.27
@@ -651,10 +655,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.7067239
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
-      propertyPath: m_Name
-      value: parlament_mobile (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
 --- !u!4 &7779965520026165018 stripped
@@ -670,6 +670,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
+      propertyPath: m_Name
+      value: office_supply_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 139.3
@@ -726,10 +730,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.0286994
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
-      propertyPath: m_Name
-      value: office_supply_store_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
 --- !u!4 &7779965520063833872 stripped
@@ -745,6 +745,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
+      propertyPath: m_Name
+      value: parlament_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.82
@@ -800,10 +804,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.855135
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
-      propertyPath: m_Name
-      value: parlament_mobile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d05d9e37cdd354bbd566a2df3b8f6a, type: 3}
@@ -895,6 +895,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
+      propertyPath: m_Name
+      value: tobacco_shop_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.369999
@@ -950,10 +954,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
       propertyPath: m_LocalScale.z
       value: 5.741811
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
-      propertyPath: m_Name
-      value: tobacco_shop_mobile (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
@@ -1120,6 +1120,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: a07aa3def4dbbb040b4557da67c80895, type: 3}
+      propertyPath: m_Name
+      value: house_2_v_6_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a07aa3def4dbbb040b4557da67c80895, type: 3}
       propertyPath: m_LocalPosition.x
       value: 77.366
@@ -1176,10 +1180,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.2985
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a07aa3def4dbbb040b4557da67c80895, type: 3}
-      propertyPath: m_Name
-      value: house_2_v_6_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a07aa3def4dbbb040b4557da67c80895, type: 3}
 --- !u!4 &7779965520563978064 stripped
@@ -1195,6 +1195,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
+      propertyPath: m_Name
+      value: furniture_store_mobile (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.1
@@ -1251,10 +1255,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.862724
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
-      propertyPath: m_Name
-      value: furniture_store_mobile (3)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
 --- !u!4 &7779965520567166267 stripped
@@ -1270,6 +1270,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
+      propertyPath: m_Name
+      value: furniture_store_mobile (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 98.03999
@@ -1326,10 +1330,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.2362936
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
-      propertyPath: m_Name
-      value: furniture_store_mobile (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
 --- !u!4 &7779965520745762344 stripped
@@ -1345,6 +1345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
+      propertyPath: m_Name
+      value: tobacco_shop_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
       propertyPath: m_LocalPosition.x
       value: 131
@@ -1401,10 +1405,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.2411
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
-      propertyPath: m_Name
-      value: tobacco_shop_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08fb4c051dce2314d96f59a5f557c330, type: 3}
 --- !u!4 &7779965520924619452 stripped
@@ -1420,6 +1420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
+      propertyPath: m_Name
+      value: computer_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b454902af51c4741a734bf771144217, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.7
@@ -1476,10 +1480,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.8562
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
-      propertyPath: m_Name
-      value: computer_store_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b454902af51c4741a734bf771144217, type: 3}
 --- !u!4 &7779965520958790992 stripped
@@ -1495,6 +1495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
+      propertyPath: m_Name
+      value: furniture_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.3
@@ -1551,10 +1555,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.0247
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
-      propertyPath: m_Name
-      value: furniture_store_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
 --- !u!4 &7779965520971913061 stripped
@@ -1570,6 +1570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 3d6a43723b933514d8adf70dfb047caa, type: 3}
+      propertyPath: m_Name
+      value: metal_store_mobile
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d6a43723b933514d8adf70dfb047caa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84.49
@@ -1626,10 +1630,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.622236
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 3d6a43723b933514d8adf70dfb047caa, type: 3}
-      propertyPath: m_Name
-      value: metal_store_mobile
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d6a43723b933514d8adf70dfb047caa, type: 3}
 --- !u!4 &7779965521075774889 stripped
@@ -1645,6 +1645,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
+      propertyPath: m_Name
+      value: furniture_store_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54.82
@@ -1700,10 +1704,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.4307537
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
-      propertyPath: m_Name
-      value: furniture_store_mobile (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879d6eb73869dbc4bb6435c34e2dd6da, type: 3}
@@ -1795,6 +1795,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
+      propertyPath: m_Name
+      value: sport_store_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2045e42716953924190db43bc47c0353, type: 3}
       propertyPath: m_LocalPosition.x
       value: 67.2
@@ -1851,10 +1855,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.173808
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
-      propertyPath: m_Name
-      value: sport_store_mobile (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2045e42716953924190db43bc47c0353, type: 3}
 --- !u!4 &7779965521171445755 stripped
@@ -1870,6 +1870,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
+      propertyPath: m_Name
+      value: office_supply_store_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.27
@@ -1925,10 +1929,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
       propertyPath: m_LocalScale.z
       value: 3.7064035
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
-      propertyPath: m_Name
-      value: office_supply_store_mobile (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd85eb373b94a4da441e600fd0ad0e, type: 3}
@@ -2095,6 +2095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4261738912478154257}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
+      propertyPath: m_Name
+      value: grocery_store_mobile (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 128.64
@@ -2150,10 +2154,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.055814
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}
-      propertyPath: m_Name
-      value: grocery_store_mobile (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1f373f719671d4dae4af778b96e02d, type: 3}

@@ -21,7 +21,7 @@ public class DestroyByContact : MonoBehaviour
             vida = (Slider)FindObjectOfType(typeof(Slider));
         }
 
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
     }
 
