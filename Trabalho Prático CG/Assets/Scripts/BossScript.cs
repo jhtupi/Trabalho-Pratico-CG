@@ -22,8 +22,7 @@ public class BossScript : MonoBehaviour
     public Vector2 startWait;
     public Vector2 maneuverTime;
     public Vector2 maneuverWait;
-
-    private float currentSpeed;
+    
     private float targetManeuver;
     private float flagEvasao;
 
@@ -63,12 +62,14 @@ public class BossScript : MonoBehaviour
         yield return new WaitForSeconds(tempoMorte);
         Destroy(self.gameObject);
 
+        // Chamar vitória da fase
     }
+
 
     void FixedUpdate()
     {
         float newManeuver = Mathf.MoveTowards(GetComponent<Rigidbody>().velocity.x, targetManeuver, smoothing * Time.deltaTime);
-        GetComponent<Rigidbody>().velocity = new Vector3(newManeuver, 0.0f, currentSpeed);
+        GetComponent<Rigidbody>().velocity = new Vector3(newManeuver, 0.0f, 0.0f);
         GetComponent<Rigidbody>().position = new Vector3
         (
             Mathf.Clamp(GetComponent<Rigidbody>().position.x, xMin, xMax),

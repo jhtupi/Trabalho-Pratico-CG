@@ -730,7 +730,9 @@ MonoBehaviour:
   fase2: {fileID: 748664101}
   boundary: {fileID: 432999620}
   self: {fileID: 436957266}
-  boss: {fileID: 274839333498740432, guid: c3febda4045cddd4589695f2df00c9c6, type: 3}
+  bossPrefab: {fileID: 274839333498740432, guid: c3febda4045cddd4589695f2df00c9c6,
+    type: 3}
+  boss: {fileID: 0}
   distancia: 300
 --- !u!65 &436957268
 BoxCollider:
@@ -1144,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 20
+  scrollSpeed: 15
 --- !u!1001 &559759856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1829,7 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 20
+  scrollSpeed: 15
 --- !u!54 &1367559886
 Rigidbody:
   m_ObjectHideFlags: 0

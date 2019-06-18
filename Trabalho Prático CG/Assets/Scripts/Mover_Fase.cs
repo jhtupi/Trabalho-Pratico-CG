@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mover_Fase : MonoBehaviour
 {
-    public GameObject fase1, fase2, boundary, self, boss;
+    public GameObject fase1, fase2, boundary, self, bossPrefab, boss;
     private GameController gameController;
     private int flagFase;
     public float distancia;
@@ -64,9 +64,15 @@ public class Mover_Fase : MonoBehaviour
         );
 
         // Invoca o boss
-        yield return new WaitForSeconds(4);
-        Instantiate(boss, posicaoBoss, bossRotation);
-        //yield return 0;
+        yield return new WaitForSeconds(2);
+
+        // Invoca apenas uma instância do boss
+        if (boss == null)
+        {
+            boss = Instantiate(bossPrefab, posicaoBoss, bossRotation) as GameObject;
+        }
+
+        StopCoroutine(AparicaoBoss());
 
     }
     private void moverObjetos()
