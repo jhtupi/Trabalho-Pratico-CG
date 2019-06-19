@@ -27,7 +27,6 @@ public class BossScript : MonoBehaviour
     private float flagEvasao;
 
     
-
     private void Start()
     {
 
