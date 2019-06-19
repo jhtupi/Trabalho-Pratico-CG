@@ -19,12 +19,14 @@ public class PlayerController : MonoBehaviour
     public GameObject shot;
     public Transform shotSpawn;
     public float fireRate;
+    Quaternion shotRotation;
 
     private float nextFire;
 
     void Start()
     {
         GetComponent<Rigidbody>().freezeRotation = true;
+        shotRotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     void Update()
@@ -32,8 +34,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            //shotSpawn.localScale(0.1f, 0.1f, 0.1f);
+            Instantiate(shot, shotSpawn.position, shotRotation);
             //GetComponent<AudioSource>().Play();
         }
 

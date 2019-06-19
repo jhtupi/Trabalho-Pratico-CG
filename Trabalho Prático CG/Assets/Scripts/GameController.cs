@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         
-        //StartCoroutine(SpawnChest());
-        //StartCoroutine(SpawnWaves());
+        StartCoroutine(SpawnChest());
+        StartCoroutine(SpawnWaves());
 
 
 
