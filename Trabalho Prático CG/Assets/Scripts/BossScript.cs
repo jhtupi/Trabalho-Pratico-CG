@@ -63,7 +63,7 @@ public class BossScript : MonoBehaviour
         anim.SetTrigger(Animator.StringToHash("Died"));
         yield return new WaitForSeconds(tempoMorte);
         Destroy(self.gameObject);
-
+        gameController.GameVictory();
         // Chamar vitória da fase
     }
 

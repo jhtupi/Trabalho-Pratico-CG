@@ -22,10 +22,14 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text restartText;
     public Text gameOverText;
+    public Text gameVictoryText;
+    public Text restartVitText;
     public int pontuacaoBoss;
 
     private bool gameOver;
+    private bool gameVictory;
     private bool restart;
+    private bool continua;
     private int score;
 
     private void Start()
@@ -38,8 +42,12 @@ public class GameController : MonoBehaviour
 
         gameOver = false;
         restart = false;
+        gameVictory = false;
+        continua = false;
         restartText.text = "";
         gameOverText.text = "";
+        gameVictoryText.text = "";
+        restartVitText.text = "";
         score = 0;
         UpdateScore();
 
@@ -55,11 +63,31 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (gameOver)
+        {
+            restartText.text = "Pressione 'R' para reiniciar";
+            restart = true;
+        }
+
+        if (gameVictory)
+        {
+            restartVitText.text = "Pressione 'P' para continuar";
+            continua = true;
+        }
+
         if (restart)
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
+        if (continua)
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //mudar para fase seguinte
             }
         }
     }
@@ -122,6 +150,12 @@ public class GameController : MonoBehaviour
     {
         gameOverText.text = "Game Over!";
         gameOver = true;
+    }
+
+    public void GameVictory()
+    {
+        gameVictoryText.text = "Vitória!";
+        gameVictory = true;
     }
 
     IEnumerator SpawnChest()
