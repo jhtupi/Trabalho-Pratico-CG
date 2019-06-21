@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         
-        //StartCoroutine(SpawnChest());
+        StartCoroutine(SpawnChest());
         //StartCoroutine(SpawnWaves());
 
 
@@ -165,7 +165,6 @@ public class GameController : MonoBehaviour
 
         {
 
-           
             for (int i = 0; i < chestCount; i++)
             {
                 flagChest = Random.Range(0, 100); 

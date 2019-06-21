@@ -3,7 +3,15 @@ guid: d8c93d9d326c2b64c8c7c80f491868a7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemy1: {instanceID: 0}
+  - Chest: {fileID: 1000013150446872, guid: 30da2d9a5426d9e4ea184a674bbf5017, type: 3}
+  - self: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - restartText: {instanceID: 0}
+  - gameOverText: {instanceID: 0}
+  - gameVictoryText: {instanceID: 0}
+  - restartVitText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
