@@ -7,7 +7,7 @@ public class DestroyByContact : MonoBehaviour
 {
     public GameObject explosion;
     public GameObject playerExplosion;
-    public GameObject self;
+    public GameObject self, player;
     public int scoreValue;
     private GameController gameController;
     private Slider vida;
@@ -30,9 +30,11 @@ public class DestroyByContact : MonoBehaviour
     {
 
 
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Shield")
         {
-            if(other.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
+            player = GameObject.Find("Player");
+
+            if (player.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
             {
                 Destroy(self);
                 if (explosion != null)
@@ -40,6 +42,7 @@ public class DestroyByContact : MonoBehaviour
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
                 gameController.AddScore(scoreValue);
+                player.gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 return;
             }
             else
@@ -77,18 +80,11 @@ public class DestroyByContact : MonoBehaviour
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            if (other.tag == "Shield")
-            {
-                other.gameObject.SetActive(false);
-                gameController.AddScore(scoreValue);
-                Destroy(self);
-            }
-            else
-            {
-                Destroy(other.gameObject);
-                gameController.AddScore(scoreValue);
-                Destroy(self);
-            }
+            
+            Destroy(other.gameObject);
+            gameController.AddScore(scoreValue);
+            Destroy(self);
+            
          
 
         }
