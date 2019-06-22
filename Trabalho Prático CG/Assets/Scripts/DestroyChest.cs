@@ -11,7 +11,12 @@ public class DestroyChest : MonoBehaviour
     private Slider vidaPlayer;
     private GameController gameController;
     private float flag;
-  
+
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -33,22 +38,23 @@ public class DestroyChest : MonoBehaviour
 
         //gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
-        flag = Random.Range(50, 100); // Determina qual se o player ganhará vida ou escudo
-        if (flag >= 50)
+        flag = Random.Range(0, 150); // Determina qual se o player ganhará no baú
+
+        // Aumenta a vida do player
+        if (flag >= 0 && flag < 50)
         {
-            if (vidaPlayer.value < 100)
-           {
-                vidaPlayer.value = 100;
-           }
-            else
-            {
+            vidaPlayer.value = 100;
+        }
+        // Ativa o escudo do player
+        else if (flag >= 50 && flag < 100)
+        {
+            player.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
 
-                player = GameObject.Find("Player");
-                player.gameObject.transform.GetChild(1).gameObject.SetActive(true); 
-                
-
-
-            }
+        // Dá a possibilidade de usar a bomba
+        else if (flag >= 100 && flag <= 150)
+        {
+            player.GetComponent<PlayerController>().IncreaseBomb();
         }
         
     }

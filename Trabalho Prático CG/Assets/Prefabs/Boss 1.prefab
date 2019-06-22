@@ -366,6 +366,8 @@ MonoBehaviour:
   scoreHit: 10
   scoreKill: 100
   self: {fileID: 274839333498740432}
+  bombExplosion: {fileID: 4901464797283520431, guid: 1ecbe7c003187ea45ac8cfd5179502ac,
+    type: 3}
   tempoMorte: 3.9
   xMin: -3
   xMax: 3
