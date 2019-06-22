@@ -26,11 +26,11 @@ public class GameController : MonoBehaviour
     public Text restartVitText;
     public int pontuacaoBoss;
 
-    private bool gameOver;
-    private bool gameVictory;
-    private bool restart;
-    private bool continua;
-    private int score;
+    public bool gameOver;
+    public bool gameVictory;
+    public bool restart;
+    public bool continua;
+    public int score;
 
     private void Start()
     {
@@ -60,18 +60,6 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (gameOver)
-        {
-            restartText.text = "Pressione 'R' para reiniciar";
-            restart = true;
-        }
-
-        if (gameVictory)
-        {
-            restartVitText.text = "Pressione 'P' para continuar";
-            continua = true;
-        }
-
         if (restart)
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -109,7 +97,7 @@ public class GameController : MonoBehaviour
                 }
                 else // Baú
                 {
-                    Instantiate(Chest, spawnPosition, spawnRotation);
+                     Instantiate(Chest, spawnPosition, spawnRotation);
                 }
                 
                 yield return new WaitForSeconds(spawnWait);
@@ -121,6 +109,13 @@ public class GameController : MonoBehaviour
                 restartText.text = "Pressione 'R' para reiniciar";
                 restart = true;
                 break;
+            }
+
+            if (gameVictory)
+            {
+                restartVitText.text = "Pressione 'P' para continuar";
+                continua = true;
+
             }
         }
 

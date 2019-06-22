@@ -22,6 +22,11 @@ public class Mover_Fase : MonoBehaviour
        
     }
 
+    public void Update()
+    {
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -75,7 +80,7 @@ public class Mover_Fase : MonoBehaviour
             boss = Instantiate(bossPrefab, posicaoBoss, bossRotation) as GameObject;
         }
 
-        StopCoroutine(AparicaoBoss());
+
 
     }
     private void moverObjetos()
