@@ -22,6 +22,7 @@ public class DestroyByContact : MonoBehaviour
         }
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        player = GameObject.Find("Player");
 
     }
 
