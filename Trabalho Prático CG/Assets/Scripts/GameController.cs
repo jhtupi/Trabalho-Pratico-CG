@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject self;
     public float spawnValuesX;
     public int enemyCount;
-    public int chestCount;
+   // public int chestCount;
     public int flagChest;
     public float spawnWait;
     public float startWait;
@@ -35,11 +35,9 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         
-        StartCoroutine(SpawnChest());
-        //StartCoroutine(SpawnWaves());
-
-
-
+        
+        StartCoroutine(SpawnWaves());
+ 
         gameOver = false;
         restart = false;
         gameVictory = false;
@@ -55,7 +53,6 @@ public class GameController : MonoBehaviour
 
     public void Boss()
     {
-        StopCoroutine(SpawnChest());
         StopCoroutine(SpawnWaves());
     }
 
@@ -106,13 +103,13 @@ public class GameController : MonoBehaviour
 
                 
 
-                if (flagEnemy >= 50) // Inimigo 1
+                if (flagEnemy <= 95) // Inimigo 1
                 {
                     Instantiate(enemy1, spawnPosition, spawnRotation);
                 }
-                else // Inimigo 2
+                else // Baú
                 {
-                    // Instantiate(enemy2, spawnPosition, spawnRotation); 
+                    Instantiate(Chest, spawnPosition, spawnRotation);
                 }
                 
                 yield return new WaitForSeconds(spawnWait);
@@ -158,6 +155,7 @@ public class GameController : MonoBehaviour
         gameVictory = true;
     }
 
+    /*
     IEnumerator SpawnChest()
     {
         yield return new WaitForSeconds(startWait);
@@ -182,5 +180,6 @@ public class GameController : MonoBehaviour
 
 
     }
+    */
 
 }

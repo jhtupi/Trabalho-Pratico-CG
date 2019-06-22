@@ -32,44 +32,68 @@ public class DestroyByContact : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            if(vida.value > 0)
+            if(other.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
             {
-                vida.value -= 20;
                 Destroy(self);
                 if (explosion != null)
                 {
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
+                gameController.AddScore(scoreValue);
                 return;
             }
             else
             {
-                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                Destroy(other.gameObject);
-                gameController.GameOver();
+
+                if (vida.value > 0)
+                {
+                    vida.value -= 20;
+                    Destroy(self);
+                    if (explosion != null)
+                    {
+                        Instantiate(explosion, transform.position, transform.rotation);
+                    }
+                    return;
+                }
+                else
+                {
+                    Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                    Destroy(other.gameObject);
+                    gameController.GameOver();
+                }
             }
-            
-        } else if (other.tag != "chest")
+
+
+        } else if (other.tag != "Chest")
         {
-            if (other.tag == "Boundary" || other.tag == "Enemy")
+            if (other.tag == "Boundary" || other.tag == "Enemy"|| other.tag == "Boss")
             {
                 return;
             }
 
+          
             if (explosion != null)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            Destroy(other.gameObject);
-            Destroy(self);
+            if (other.tag == "Shield")
+            {
+                other.gameObject.SetActive(false);
+                gameController.AddScore(scoreValue);
+                Destroy(self);
+            }
+            else
+            {
+                Destroy(other.gameObject);
+                gameController.AddScore(scoreValue);
+                Destroy(self);
+            }
+         
 
         }
 
-        
-        gameController.AddScore(scoreValue);
-        Destroy(other.gameObject);
-        Destroy(self);
+ 
         
     }
 }

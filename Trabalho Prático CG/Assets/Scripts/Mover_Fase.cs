@@ -19,6 +19,7 @@ public class Mover_Fase : MonoBehaviour
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,6 +56,8 @@ public class Mover_Fase : MonoBehaviour
         // Para o player e a câmera
         camera.GetComponent<PlayerScroller>().scrollSpeed = 0;
         player.GetComponent<PlayerScroller>().scrollSpeed = 0;
+        
+
         Quaternion bossRotation = Quaternion.Euler(0f, 180f, 0f);
         posicaoBoss = new Vector3
         (

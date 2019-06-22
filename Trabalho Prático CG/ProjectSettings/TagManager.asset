@@ -11,6 +11,7 @@ TagManager:
   - PlayerShot
   - Fire
   - Chest
+  - Shield
   layers:
   - Default
   - TransparentFX
