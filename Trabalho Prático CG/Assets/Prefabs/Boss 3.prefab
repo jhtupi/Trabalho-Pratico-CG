@@ -566,7 +566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2771578444688871524}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56dd7919094d5b244880d88603a90442, type: 3}
   m_Name: 
@@ -585,6 +585,7 @@ MonoBehaviour:
   startWait: {x: 0.5, y: 1}
   maneuverTime: {x: 1, y: 2}
   maneuverWait: {x: 1, y: 2}
+  qualBoss: 3
 --- !u!54 &1428694249063641520
 Rigidbody:
   m_ObjectHideFlags: 0
