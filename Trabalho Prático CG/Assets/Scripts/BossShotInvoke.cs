@@ -6,6 +6,8 @@ public class BossShotInvoke : StateMachineBehaviour
 {
     public GameObject shot;
     public Transform shotSpawn;
+    private int flag;
+    public int flagTime;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,12 +17,23 @@ public class BossShotInvoke : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
         shotSpawn = GameObject.Find("BossShotSpawn").GetComponent<Transform>();
+        flag = 1;
+        //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Instantiate(shot, shotSpawn.position, shotSpawn.rotation);        
+        if (flag == flagTime)
+        {
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            flag = 0;
+        } else
+        {
+            flag = flag + 1;
+        }
+        
+
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {

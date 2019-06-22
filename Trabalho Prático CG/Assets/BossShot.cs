@@ -8,7 +8,7 @@ public class BossShot : MonoBehaviour
 {
     public float shotSpeed;
     public int shotDamage;
-    public GameObject playerExplosion, self;
+    public GameObject playerExplosion, self, player;
 
     private GameController gameController;
     private Slider vida;
@@ -26,6 +26,7 @@ public class BossShot : MonoBehaviour
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
+        player = GameObject.Find("Player");
         GetComponent<Rigidbody>().velocity = transform.forward * shotSpeed;
     }
 
@@ -33,19 +34,27 @@ public class BossShot : MonoBehaviour
     {
 
 
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Shield")
         {
-            if (vida.value > 0)
+            if (other.tag == "Shield")
             {
-                vida.value -= shotDamage;
-                Destroy(self);
-                return;
+                player.gameObject.transform.GetChild(1).gameObject.SetActive(false);
             }
+            
             else
             {
-                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                Destroy(other.gameObject);
-                gameController.GameOver();
+                if (vida.value > 0)
+                {
+                    vida.value -= shotDamage;
+                    Destroy(self);
+                    return;
+                }
+                else
+                {
+                    Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                    Destroy(other.gameObject);
+                    gameController.GameOver();
+                }
             }
             Destroy(self);
         }

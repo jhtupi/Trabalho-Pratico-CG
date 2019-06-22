@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 3124386787588988807, guid: a4317fc2180d0804c8237bacb2e5dddc, type: 3}
   shotSpawn: {fileID: 0}
+  flagTime: 3
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

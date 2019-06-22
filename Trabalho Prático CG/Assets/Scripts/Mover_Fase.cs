@@ -31,18 +31,21 @@ public class Mover_Fase : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (flagFase == 1)
+            if (fase1 != null && fase2 != null)
             {
-                fase1.transform.position = new Vector3(fase1.GetComponent<Transform>().position.x, fase1.GetComponent<Transform>().position.y, fase1.GetComponent<Transform>().position.z + distancia);
-                moverObjetos();
-                flagFase = 0;
+                if (flagFase == 1)
+                {
+                    fase1.transform.position = new Vector3(fase1.GetComponent<Transform>().position.x, fase1.GetComponent<Transform>().position.y, fase1.GetComponent<Transform>().position.z + distancia);
+                    flagFase = 0;
+                }
+                else
+                {
+                    fase2.transform.position = new Vector3(fase2.GetComponent<Transform>().position.x, fase2.GetComponent<Transform>().position.y, fase2.GetComponent<Transform>().position.z + distancia);
+                    flagFase = 1;
+                    
+                }
             }
-            else
-            {
-                fase2.transform.position = new Vector3(fase2.GetComponent<Transform>().position.x, fase2.GetComponent<Transform>().position.y, fase2.GetComponent<Transform>().position.z + distancia);
-                flagFase = 1;
-                moverObjetos();
-            }
+            moverObjetos();
         }
 
         // Aparição do boss

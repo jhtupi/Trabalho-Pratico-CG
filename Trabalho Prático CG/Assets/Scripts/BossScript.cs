@@ -25,6 +25,7 @@ public class BossScript : MonoBehaviour
     
     private float targetManeuver;
     private float flagEvasao;
+    public int qualBoss;
 
     
 
@@ -40,7 +41,15 @@ public class BossScript : MonoBehaviour
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         anim = GetComponent<Animator>();
-        StartCoroutine(Evade());
+        if (qualBoss == 1 || qualBoss == 2)
+        {
+            StartCoroutine(Evade());
+        }
+        else
+        {
+            StartCoroutine(Evade2());
+        }
+        
 
     }
 
@@ -51,6 +60,28 @@ public class BossScript : MonoBehaviour
         while (true)
         {
             targetManeuver = Random.Range(0, dodge) * -Mathf.Sign(transform.position.x);
+            yield return new WaitForSeconds(Random.Range(maneuverTime.x, maneuverTime.y));
+            targetManeuver = 0;
+            yield return new WaitForSeconds(Random.Range(maneuverWait.x, maneuverWait.y));
+        }
+    }
+
+    // Evasão que contém vertical também
+    IEnumerator Evade2()
+    {
+        yield return new WaitForSeconds(Random.Range(startWait.x, startWait.y));
+        while (true)
+        {
+            flagEvasao = Random.Range(0, 100);
+            if (flagEvasao >= 50) // Evasão horizontal
+            {
+                targetManeuver = Random.Range(0, dodge) * -Mathf.Sign(transform.position.x);
+            }
+            else // Evasão vertical
+            {
+                targetManeuver = Random.Range(0, dodge) * -Mathf.Sign(transform.position.y);
+            }
+
             yield return new WaitForSeconds(Random.Range(maneuverTime.x, maneuverTime.y));
             targetManeuver = 0;
             yield return new WaitForSeconds(Random.Range(maneuverWait.x, maneuverWait.y));
@@ -70,14 +101,45 @@ public class BossScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        float newManeuver = Mathf.MoveTowards(GetComponent<Rigidbody>().velocity.x, targetManeuver, smoothing * Time.deltaTime);
-        GetComponent<Rigidbody>().velocity = new Vector3(newManeuver, 0.0f, 0.0f);
-        GetComponent<Rigidbody>().position = new Vector3
-        (
-            Mathf.Clamp(GetComponent<Rigidbody>().position.x, xMin, xMax),
-            GetComponent<Rigidbody>().position.y,
-            GetComponent<Rigidbody>().position.z
-        );
+        if(qualBoss == 1 || qualBoss == 2)
+        {
+            float newManeuver = Mathf.MoveTowards(GetComponent<Rigidbody>().velocity.x, targetManeuver, smoothing * Time.deltaTime);
+            GetComponent<Rigidbody>().velocity = new Vector3(newManeuver, 0.0f, 0.0f);
+            GetComponent<Rigidbody>().position = new Vector3
+            (
+                Mathf.Clamp(GetComponent<Rigidbody>().position.x, xMin, xMax),
+                GetComponent<Rigidbody>().position.y,
+                GetComponent<Rigidbody>().position.z
+            );
+        } else
+        {
+            if (flagEvasao >= 50) // Evasão horizontal
+            {
+                float newManeuver = Mathf.MoveTowards(GetComponent<Rigidbody>().velocity.x, targetManeuver, smoothing * Time.deltaTime);
+                GetComponent<Rigidbody>().velocity = new Vector3(newManeuver, 0.0f, 0.0f);
+                GetComponent<Rigidbody>().position = new Vector3
+                (
+                    Mathf.Clamp(GetComponent<Rigidbody>().position.x, xMin, xMax),
+                    GetComponent<Rigidbody>().position.y,
+                    GetComponent<Rigidbody>().position.z
+                );
+            }
+            else // Evasão vertical
+            {
+                float newManeuver = Mathf.MoveTowards(GetComponent<Rigidbody>().velocity.y, targetManeuver, smoothing * Time.deltaTime);
+                GetComponent<Rigidbody>().velocity = new Vector3(0.0f, newManeuver, 0.0f);
+                GetComponent<Rigidbody>().position = new Vector3
+                (
+                    
+                    GetComponent<Rigidbody>().position.x,
+                    Mathf.Clamp(GetComponent<Rigidbody>().position.y, 1, 10),
+                    GetComponent<Rigidbody>().position.z
+                );
+            }
+
+        }
+
+        
        
     }
 
