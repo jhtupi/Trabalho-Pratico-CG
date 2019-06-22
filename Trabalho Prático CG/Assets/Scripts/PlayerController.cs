@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject shot, bomb;
     public Transform shotSpawn;
+    private Quaternion shotRotation;
     public float fireRate;
+
 
     private int bombCounter;
 
@@ -34,17 +36,30 @@ public class PlayerController : MonoBehaviour
     {        
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            shotRotation = new Quaternion(
+                shotSpawn.rotation.x - shotSpawn.rotation.x,
+                shotSpawn.rotation.y - shotSpawn.rotation.y,
+                shotSpawn.rotation.z - shotSpawn.rotation.z,
+                shotSpawn.rotation.w - shotSpawn.rotation.w
+                );
             nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            Instantiate(shot, shotSpawn.position, shotRotation);
             
         }
 
         if (Input.GetButton("Fire2") && Time.time > nextFire)
         {
+
             if (bombCounter > 0)
             {
+                shotRotation = new Quaternion(
+                shotSpawn.rotation.x - shotSpawn.rotation.x,
+                shotSpawn.rotation.y - shotSpawn.rotation.y,
+                shotSpawn.rotation.z - shotSpawn.rotation.z,
+                shotSpawn.rotation.w - shotSpawn.rotation.w
+                );
                 nextFire = Time.time + fireRate;
-                Instantiate(bomb, (shotSpawn.position + new Vector3(0.0f, 0.0f, 0.9f)), shotSpawn.rotation);
+                Instantiate(bomb, (shotSpawn.position + new Vector3(0.0f, 0.0f, 0.9f)), shotRotation);
                 bombCounter = bombCounter - 1;
             }
             
