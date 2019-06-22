@@ -43,8 +43,9 @@ public class Mover_Fase : MonoBehaviour
         // Aparição do boss
         if(gameController.GetScore() >= gameController.pontuacaoBoss)
         {
-            StartCoroutine(AparicaoBoss());
             gameController.Boss();
+            StartCoroutine(AparicaoBoss());
+            
         }
        
     }

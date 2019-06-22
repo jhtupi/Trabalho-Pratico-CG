@@ -16,15 +16,18 @@ public class PlayerController : MonoBehaviour
     public Boundary boundary;
     public float tilt;
 
-    public GameObject shot;
+    public GameObject shot, bomb;
     public Transform shotSpawn;
     public float fireRate;
+
+    private int bombCounter;
 
     private float nextFire;
 
     void Start()
     {
         GetComponent<Rigidbody>().freezeRotation = true;
+        bombCounter = 3;
     }
 
     void Update()
@@ -33,11 +36,27 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            //shotSpawn.localScale(0.1f, 0.1f, 0.1f);
-            //GetComponent<AudioSource>().Play();
+            
         }
 
-        
+        if (Input.GetButton("Fire2") && Time.time > nextFire)
+        {
+            if (bombCounter > 0)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(bomb, (shotSpawn.position + new Vector3(0.0f, 0.0f, 0.9f)), shotSpawn.rotation);
+                bombCounter = bombCounter - 1;
+            }
+            
+            
+        }
+
+
+    }
+
+    public void IncreaseBomb()
+    {
+        bombCounter = bombCounter + 3;
     }
 
     void FixedUpdate()

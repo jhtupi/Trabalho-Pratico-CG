@@ -8,7 +8,7 @@ public class BossScript : MonoBehaviour
     public int bossLife;
     public int scoreHit, scoreKill;
     private GameController gameController;
-    public GameObject self;
+    public GameObject self, bombExplosion;
     public float tempoMorte;
     private Slider vidaPlayer;
     Animator anim;
@@ -86,11 +86,19 @@ public class BossScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "PlayerShot")
+        if (other.tag == "Player" || other.tag == "PlayerShot" || other.tag == "Bomb")
         {
             if (bossLife > 0)
             {
-                bossLife -= 10;
+                if(other.tag == "Bomb")
+                {
+                    bossLife -= 20;
+                    Instantiate(bombExplosion, other.transform.position, other.transform.rotation);
+                } else
+                {
+                    bossLife -= 10;
+                }
+                
                 gameController.AddScore(scoreHit);
                 // Chama animação do Hit
                 anim.SetTrigger(Animator.StringToHash("Hit"));

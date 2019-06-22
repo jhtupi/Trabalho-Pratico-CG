@@ -12,6 +12,7 @@ TagManager:
   - Fire
   - Chest
   - Shield
+  - Bomb
   layers:
   - Default
   - TransparentFX
