@@ -7,7 +7,7 @@ public class DestroyByContact : MonoBehaviour
 {
     public GameObject explosion;
     public GameObject playerExplosion;
-    public GameObject self;
+    public GameObject self, player;
     public int scoreValue;
     private GameController gameController;
     private Slider vida;
@@ -30,46 +30,66 @@ public class DestroyByContact : MonoBehaviour
     {
 
 
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Shield")
         {
-            if(vida.value > 0)
+            player = GameObject.Find("Player");
+
+            if (player.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
             {
-                vida.value -= 20;
                 Destroy(self);
                 if (explosion != null)
                 {
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
+                gameController.AddScore(scoreValue);
+                player.gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 return;
             }
             else
             {
-                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                Destroy(other.gameObject);
-                gameController.GameOver();
+
+                if (vida.value > 0)
+                {
+                    vida.value -= 20;
+                    Destroy(self);
+                    if (explosion != null)
+                    {
+                        Instantiate(explosion, transform.position, transform.rotation);
+                    }
+                    return;
+                }
+                else
+                {
+                    Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                    Destroy(other.gameObject);
+                    gameController.GameOver();
+                }
             }
-            
-        } else if (other.tag != "chest")
+
+
+        } else if (other.tag != "Chest")
         {
-            if (other.tag == "Boundary" || other.tag == "Enemy")
+            if (other.tag == "Boundary" || other.tag == "Enemy"|| other.tag == "Boss")
             {
                 return;
             }
 
+          
             if (explosion != null)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
+            
             Destroy(other.gameObject);
+            gameController.AddScore(scoreValue);
             Destroy(self);
+            
+         
 
         }
 
-        
-        gameController.AddScore(scoreValue);
-        Destroy(other.gameObject);
-        Destroy(self);
+ 
         
     }
 }

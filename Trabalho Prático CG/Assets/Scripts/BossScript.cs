@@ -102,8 +102,8 @@ public class BossScript : MonoBehaviour
                 }
             }
             // Boss morreu
-
-            Destroy(other.gameObject);
+          Destroy(other.gameObject); //??????????????????????????
+            
         }
     }
 }

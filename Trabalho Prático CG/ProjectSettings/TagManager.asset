@@ -8,6 +8,10 @@ TagManager:
   - Shot
   - Enemy
   - Boss
+  - PlayerShot
+  - Fire
+  - Chest
+  - Shield
   layers:
   - Default
   - TransparentFX
