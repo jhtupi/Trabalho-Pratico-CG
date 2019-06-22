@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44949996, g: 0.49649584, b: 0.55914426, a: 1}
+  m_IndirectSpecularColor: {r: 0.44950032, g: 0.49649626, b: 0.55914444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -537,6 +537,11 @@ MonoBehaviour:
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
   pontuacaoBoss: 10
+  gameOver: 0
+  gameVictory: 0
+  restart: 0
+  continua: 0
+  score: 0
 --- !u!1 &196653027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1329,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7914951238075050353, guid: 32f3f758529c2854fabd51be24ba23f4,
+        type: 3}
+      propertyPath: boundary.xMin
+      value: -8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f3f758529c2854fabd51be24ba23f4, type: 3}
 --- !u!1 &571070082 stripped
@@ -2046,8 +2056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 256.2, y: 136.25}
-  m_SizeDelta: {x: 330.4, y: 30.5}
+  m_AnchoredPosition: {x: 248.40002, y: 114.5}
+  m_SizeDelta: {x: 330, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1527211980
 MonoBehaviour:

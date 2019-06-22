@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 flagEnemy = Random.Range(50, 100); // Determina qual inimigo irá dar spawn
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValuesX, spawnValuesX), self.transform.position.y, self.transform.position.z);
+                Vector3 spawnPosition = new Vector3(-12, 10, self.transform.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
 
                 
@@ -97,7 +97,9 @@ public class GameController : MonoBehaviour
                 }
                 else // Baú
                 {
-                     Instantiate(Chest, spawnPosition, spawnRotation);
+                    enemyCount = 1;
+                    spawnPosition = new Vector3(0, 3, self.transform.position.z);
+                    Instantiate(Chest, spawnPosition, spawnRotation);
                 }
                 
                 yield return new WaitForSeconds(spawnWait);
