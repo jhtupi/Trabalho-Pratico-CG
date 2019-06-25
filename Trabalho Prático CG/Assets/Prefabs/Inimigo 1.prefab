@@ -65,12 +65,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundary:
-    xMin: -8
-    xMax: 0
-    yMin: 10
-    yMax: 15
+    xMin: -10
+    xMax: 3
+    yMin: -1
+    yMax: 7
   tilt: 3
-  dodge: 3
+  dodge: 10
   smoothing: 10
   startWait: {x: 0.5, y: 1}
   maneuverTime: {x: 1, y: 2}
