@@ -87,9 +87,8 @@ public class GameController : MonoBehaviour
             {
                 flagEnemy = Random.Range(50, 100); // Determina qual inimigo irá dar spawn
                 Vector3 spawnPosition = new Vector3(Random.Range(-2,2), Random.Range(-1, 4), self.transform.position.z);
-                Quaternion spawnRotation = Quaternion.identity;
-
-                
+                Quaternion spawnRotation = new Quaternion(self.transform.rotation.x, 180.0f, self.transform.rotation.z, self.transform.rotation.w);
+                //Quaternion spawnRotation = Quaternion.identity;
 
                 if (flagEnemy <= 95) // Inimigo 1
                 {
