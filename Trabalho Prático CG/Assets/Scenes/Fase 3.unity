@@ -526,7 +526,12 @@ MonoBehaviour:
   gameOverText: {fileID: 1607590011}
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
-  pontuacaoBoss: 10
+  pontuacaoBoss: 0
+  gameOver: 0
+  gameVictory: 0
+  restart: 0
+  continua: 0
+  score: 0
 --- !u!1 &196653027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1594,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858713455}
   m_CullTransparentMesh: 0
+--- !u!1 &971688711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2771578444688871524, guid: 66293a99022c21348a55727954813e28,
+    type: 3}
+  m_PrefabInstance: {fileID: 3865533447654842825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &971688717
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971688711}
+  m_Enabled: 1
 --- !u!1 &971907446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2620,7 @@ PrefabInstance:
     - target: {fileID: 2771578444688871524, guid: 66293a99022c21348a55727954813e28,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1165805795961053815, guid: 66293a99022c21348a55727954813e28,
         type: 3}
@@ -2657,6 +2676,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 311300874, guid: 66293a99022c21348a55727954813e28, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186698314, guid: 66293a99022c21348a55727954813e28, type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66293a99022c21348a55727954813e28, type: 3}

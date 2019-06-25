@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene("Fase 2");
             }
         }
 
@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 flagEnemy = Random.Range(50, 100); // Determina qual inimigo irá dar spawn
-                Vector3 spawnPosition = new Vector3(-12, 10, self.transform.position.z);
+                Vector3 spawnPosition = new Vector3(Random.Range(-2,2), Random.Range(-1, 4), self.transform.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
 
                 
