@@ -10,7 +10,7 @@ public class Mover_Fase : MonoBehaviour
     public float distancia;
     
 
-    private GameObject player, camera, camera2;
+    public GameObject player, camera, camera2;
     private Vector3 posicaoBoss;
 
     private void Start()
@@ -64,10 +64,11 @@ public class Mover_Fase : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         // Para o player e a câmera
-        camera.GetComponent<PlayerScroller>().scrollSpeed = 0;
-        camera2.GetComponent<PlayerScroller>().scrollSpeed = 0;
-        player.GetComponent<PlayerScroller>().scrollSpeed = 0;
+        player.GetComponent<PlayerScroller>().stop();
+        camera.GetComponent<PlayerScroller>().stop();
+        camera2.GetComponent<PlayerScroller>().stop();
         
+
 
         Quaternion bossRotation = Quaternion.Euler(0f, 180f, 0f);
         posicaoBoss = new Vector3
