@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     public Camera[] cameras;
     public int numeroCameras;
     public int NumeroMaximo;
+    private GameObject player;
 
 
     private void Start()
@@ -52,6 +53,7 @@ public class GameController : MonoBehaviour
         gameVictoryText.text = "";
         restartVitText.text = "";
         score = 0;
+        player = GameObject.Find("Player");
         UpdateScore();
 
         NumeroMaximo = cameras.Length;
@@ -65,6 +67,7 @@ public class GameController : MonoBehaviour
 
     public void Boss()
     {
+       // player.GetComponent<PlayerScroller>().stop();
         StopCoroutine(SpawnWaves());
     }
 
@@ -132,7 +135,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 flagEnemy = Random.Range(50, 100); // Determina qual inimigo irá dar spawn
-                Vector3 spawnPosition = new Vector3(Random.Range(-2,2), Random.Range(-1, 4), self.transform.position.z);
+                Vector3 spawnPosition = new Vector3(Random.Range(-4,4), Random.Range(3, 6), self.transform.position.z);
                 Quaternion spawnRotation = new Quaternion(self.transform.rotation.x, 180.0f, self.transform.rotation.z, self.transform.rotation.w);
                 //Quaternion spawnRotation = Quaternion.identity;
 

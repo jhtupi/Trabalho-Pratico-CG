@@ -10,4 +10,9 @@ public class PlayerScroller : MonoBehaviour
         transform.position += scrollSpeed * new Vector3(0, 0, 1)* Time.deltaTime;
 
     }
+
+    public void stop()
+    {
+        scrollSpeed = 0.0f;
+    }
 }
