@@ -526,7 +526,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1607590011}
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
-  pontuacaoBoss: 0
+  pontuacaoBoss: 100
   gameOver: 0
   gameVictory: 0
   restart: 0
