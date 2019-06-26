@@ -10,7 +10,7 @@ public class Mover_Fase : MonoBehaviour
     public float distancia;
     
 
-    private GameObject player, camera;
+    private GameObject player, camera, camera2;
     private Vector3 posicaoBoss;
 
     private void Start()
@@ -19,7 +19,8 @@ public class Mover_Fase : MonoBehaviour
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
-       
+        camera2 = GameObject.Find("Camera seguidora");
+
     }
 
     public void Update()
@@ -64,6 +65,7 @@ public class Mover_Fase : MonoBehaviour
 
         // Para o player e a câmera
         camera.GetComponent<PlayerScroller>().scrollSpeed = 0;
+        camera2.GetComponent<PlayerScroller>().scrollSpeed = 0;
         player.GetComponent<PlayerScroller>().scrollSpeed = 0;
         
 

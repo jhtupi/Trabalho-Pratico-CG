@@ -32,6 +32,11 @@ public class GameController : MonoBehaviour
     public bool continua;
     public int score;
 
+    public Camera[] cameras;
+    public int numeroCameras;
+    public int NumeroMaximo;
+
+
     private void Start()
     {
         
@@ -49,6 +54,13 @@ public class GameController : MonoBehaviour
         score = 0;
         UpdateScore();
 
+        NumeroMaximo = cameras.Length;
+        numeroCameras = 1;
+        foreach(Camera obj in cameras)
+        {
+            obj.gameObject.SetActive(false);
+        }
+        cameras[numeroCameras - 1].gameObject.SetActive(true);
     }
 
     public void Boss()
@@ -64,7 +76,7 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene("Fase 2");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
 
@@ -72,8 +84,42 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //mudar para fase seguinte
+                //mudar para fase seguinte
+                SceneManager.LoadScene("Fase 2");
             }
+        }
+
+        if (gameOver)
+        {
+            restartText.text = "Pressione 'R' para reiniciar";
+            restart = true;
+            
+
+        }
+
+        if (gameVictory)
+        {
+            restartVitText.text = "Pressione 'P' para continuar";
+            continua = true;
+        }
+
+        if(Input.GetKeyDown ("v") && numeroCameras < NumeroMaximo)
+        {
+            numeroCameras++;
+            foreach(Camera obj in cameras)
+            {
+                obj.gameObject.SetActive(false);
+            }
+                cameras[numeroCameras - 1].gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown("v") && numeroCameras == NumeroMaximo)
+        {
+            foreach (Camera obj in cameras)
+            {
+                obj.gameObject.SetActive(false);
+            }
+            cameras[numeroCameras - 1].gameObject.SetActive(true);
+            numeroCameras = 0;
         }
     }
 
@@ -105,19 +151,7 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(waveWait);
 
-            if (gameOver)
-            {
-                restartText.text = "Pressione 'R' para reiniciar";
-                restart = true;
-                break;
-            }
 
-            if (gameVictory)
-            {
-                restartVitText.text = "Pressione 'P' para continuar";
-                continua = true;
-
-            }
         }
 
     }
@@ -143,6 +177,7 @@ public class GameController : MonoBehaviour
     {
         gameOverText.text = "Game Over!";
         gameOver = true;
+        GetComponent<AudioSource>().Play();
     }
 
     public void GameVictory()

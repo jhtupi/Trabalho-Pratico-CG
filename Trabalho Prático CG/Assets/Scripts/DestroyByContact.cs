@@ -33,8 +33,8 @@ public class DestroyByContact : MonoBehaviour
 
         if (other.tag == "Player" || other.tag == "Shield")
         {
+            GetComponent<AudioSource>().Play(); //deveria estar reproduzindo...
             player = GameObject.Find("Player");
-
             if (player.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
             {
                 Destroy(self);
@@ -52,6 +52,7 @@ public class DestroyByContact : MonoBehaviour
                 if (vida.value > 0)
                 {
                     vida.value -= 20;
+                    
                     Destroy(self);
                     if (explosion != null)
                     {
