@@ -582,12 +582,13 @@ MonoBehaviour:
   gameOverText: {fileID: 1607590011}
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
-  pontuacaoBoss: 100
+  pontuacaoBoss: 0
   gameOver: 0
   gameVictory: 0
   restart: 0
   continua: 0
   score: 0
+  faseAtual: 1
   cameras:
   - {fileID: 534669904}
   - {fileID: 1338358549}
@@ -996,6 +997,9 @@ MonoBehaviour:
     type: 3}
   boss: {fileID: 0}
   distancia: 300
+  player: {fileID: 0}
+  camera: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!65 &436957268
 BoxCollider:
   m_ObjectHideFlags: 0
