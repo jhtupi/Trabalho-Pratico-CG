@@ -532,6 +532,7 @@ MonoBehaviour:
   restart: 0
   continua: 0
   score: 0
+  faseAtual: 0
   cameras: []
   numeroCameras: 0
   NumeroMaximo: 0
@@ -1714,20 +1715,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858713455}
   m_CullTransparentMesh: 0
---- !u!1 &971688711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2771578444688871524, guid: 66293a99022c21348a55727954813e28,
-    type: 3}
-  m_PrefabInstance: {fileID: 3865533447654842825}
-  m_PrefabAsset: {fileID: 0}
---- !u!81 &971688717
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971688711}
-  m_Enabled: 1
 --- !u!1 &971907446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,14 +2867,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 311300874, guid: 66293a99022c21348a55727954813e28, type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1186698314, guid: 66293a99022c21348a55727954813e28, type: 3}
-      propertyPath: m_Volume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66293a99022c21348a55727954813e28, type: 3}
