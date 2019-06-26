@@ -20,6 +20,7 @@ public class Mover_Fase : MonoBehaviour
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
         camera2 = GameObject.Find("Camera seguidora");
+        GetComponent<AudioSource>().Play();
 
     }
 

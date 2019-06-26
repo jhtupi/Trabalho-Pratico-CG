@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
                 nextFire = Time.time + fireRate;
                 Instantiate(bomb, (shotSpawn.position + new Vector3(0.0f, 0.0f, 0.9f)), shotRotation);
                 bombCounter = bombCounter - 1;
+                GetComponent<AudioSource>().Play();
             }
             
             

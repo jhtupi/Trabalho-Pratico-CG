@@ -30,10 +30,9 @@ public class DestroyByContact : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-
+        GetComponent<AudioSource>().Play(); //só consegui colocar o som quando o inimigo colide de modo geral
         if (other.tag == "Player" || other.tag == "Shield")
         {
-            GetComponent<AudioSource>().Play(); //deveria estar reproduzindo...
             player = GameObject.Find("Player");
             if (player.gameObject.transform.GetChild(1).gameObject.active)//Se o escudo estiver ativo
             {
@@ -85,6 +84,7 @@ public class DestroyByContact : MonoBehaviour
             
             Destroy(other.gameObject);
             gameController.AddScore(scoreValue);
+            
             Destroy(self);
             
          
