@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 1428694249063641520}
   - component: {fileID: 1428694249063641518}
   - component: {fileID: 1428694249063641519}
+  - component: {fileID: 971688717}
   m_Layer: 0
   m_Name: Boss 3
   m_TagString: Boss
@@ -571,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dd7919094d5b244880d88603a90442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossLife: 10
+  bossLife: 1000
   scoreHit: 30
   scoreKill: 300
   self: {fileID: 2771578444688871524}
@@ -635,6 +636,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &971688717
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771578444688871524}
+  m_Enabled: 1
 --- !u!1 &6003191728754528502
 GameObject:
   m_ObjectHideFlags: 0

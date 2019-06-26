@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dd7919094d5b244880d88603a90442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossLife: 30
+  bossLife: 50
   scoreHit: 10
   scoreKill: 100
   self: {fileID: 274839333498740432}
@@ -376,6 +376,7 @@ MonoBehaviour:
   startWait: {x: 0.5, y: 1}
   maneuverTime: {x: 1, y: 2}
   maneuverWait: {x: 1, y: 2}
+  qualBoss: 0
 --- !u!54 &1155249270
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -30,7 +30,8 @@ public class GameController : MonoBehaviour
     public bool gameVictory;
     public bool restart;
     public bool continua;
-    public int score;
+    public int score, faseAtual;
+    
 
     public Camera[] cameras;
     public int numeroCameras;
@@ -87,8 +88,15 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
+                if(faseAtual == 1)
+                {
+                    SceneManager.LoadScene("Fase 2");
+                } else if (faseAtual == 2)
+                {
+                    SceneManager.LoadScene("Fase 3");
+                } 
                 //mudar para fase seguinte
-                SceneManager.LoadScene("Fase 2");
+
             }
         }
 
