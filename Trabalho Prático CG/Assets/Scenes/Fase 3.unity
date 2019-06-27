@@ -526,7 +526,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1607590011}
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
-  pontuacaoBoss: 0
+  pontuacaoBoss: 50
   gameOver: 0
   gameVictory: 0
   restart: 0
@@ -1087,7 +1087,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6b4f82b5b865e0e4eb6dbbee901447cf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.181
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2301,7 +2301,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dc288fa6f134d7f42b67e7270a7f70e6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.362
   m_Pitch: 1
   Loop: 0
   Mute: 0

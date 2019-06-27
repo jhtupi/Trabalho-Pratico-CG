@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dd7919094d5b244880d88603a90442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossLife: 200
+  bossLife: 150
   scoreHit: 20
   scoreKill: 200
   self: {fileID: 1414047068467311439}

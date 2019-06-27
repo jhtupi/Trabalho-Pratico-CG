@@ -9,8 +9,8 @@ public class BossAudio : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //flag = Random.Range(1, 3);
-        flag = 1;
+        flag = Random.Range(1, 3);
+        
         if(flag == 1)
         {
             voz1 = GameObject.Find("Audio1").GetComponent<AudioSource>();
@@ -21,7 +21,7 @@ public class BossAudio : StateMachineBehaviour
             voz2 = GameObject.Find("Audio2").GetComponent<AudioSource>();
             voz2.Play();
         }
-        else if (flag == 2)
+        else if (flag == 3)
         {
             voz3 = GameObject.Find("Audio3").GetComponent<AudioSource>();
             voz3.Play();
