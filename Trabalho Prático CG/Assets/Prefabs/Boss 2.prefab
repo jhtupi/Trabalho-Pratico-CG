@@ -1075,16 +1075,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dd7919094d5b244880d88603a90442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossLife: 100
-  scoreHit: 10
-  scoreKill: 100
+  bossLife: 200
+  scoreHit: 20
+  scoreKill: 200
   self: {fileID: 1414047068467311439}
   bombExplosion: {fileID: 4901464797283520431, guid: 1ecbe7c003187ea45ac8cfd5179502ac,
     type: 3}
   tempoMorte: 3
   xMin: -3
   xMax: 3
-  dodge: 10
+  dodge: 30
   smoothing: 5
   startWait: {x: 0.5, y: 1}
   maneuverTime: {x: 1, y: 2}

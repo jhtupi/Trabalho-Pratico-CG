@@ -534,7 +534,6 @@ GameObject:
   - component: {fileID: 1428694249063641520}
   - component: {fileID: 1428694249063641518}
   - component: {fileID: 1428694249063641519}
-  - component: {fileID: 971688717}
   m_Layer: 0
   m_Name: Boss 3
   m_TagString: Boss
@@ -636,14 +635,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &971688717
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771578444688871524}
-  m_Enabled: 1
 --- !u!1 &6003191728754528502
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950032, g: 0.49649626, b: 0.55914444, a: 1}
+  m_IndirectSpecularColor: {r: 0.44949996, g: 0.49649584, b: 0.55914426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315965389}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 
@@ -897,7 +897,7 @@ MonoBehaviour:
   fase2: {fileID: 748664101}
   boundary: {fileID: 432999620}
   self: {fileID: 436957266}
-  bossPrefab: {fileID: 274839333498740432, guid: c3febda4045cddd4589695f2df00c9c6,
+  bossPrefab: {fileID: 1414047068467311439, guid: 5f3c6697833eff14792096b252b1572f,
     type: 3}
   boss: {fileID: 0}
   distancia: 300
@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367559883}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c946330dede55641a0f52ce929fc24b, type: 3}
   m_Name: 

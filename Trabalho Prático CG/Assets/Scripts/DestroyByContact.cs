@@ -30,7 +30,7 @@ public class DestroyByContact : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        GetComponent<AudioSource>().Play(); //só consegui colocar o som quando o inimigo colide de modo geral
+        //GetComponent<AudioSource>().Play(); //só consegui colocar o som quando o inimigo colide de modo geral
         if (other.tag == "Player" || other.tag == "Shield")
         {
             player = GameObject.Find("Player");

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950032, g: 0.49649626, b: 0.55914444, a: 1}
+  m_IndirectSpecularColor: {r: 0.44949996, g: 0.49649584, b: 0.55914426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -526,7 +526,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1607590011}
   gameVictoryText: {fileID: 90659993}
   restartVitText: {fileID: 1527211980}
-  pontuacaoBoss: 100
+  pontuacaoBoss: 0
   gameOver: 0
   gameVictory: 0
   restart: 0
@@ -679,7 +679,7 @@ SpriteRenderer:
   m_Size: {x: 40.96, y: 40.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &259992631
@@ -785,6 +785,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inimigo 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344317779934283783, guid: 17c0c295e64e07c44b97716969d860dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6784444013654777766, guid: 17c0c295e64e07c44b97716969d860dc,
         type: 3}
@@ -1376,7 +1381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
-  - component: {fileID: 534669903}
   - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
@@ -1385,14 +1389,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &534669903
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
 --- !u!20 &534669904
 Camera:
   m_ObjectHideFlags: 0
@@ -2409,6 +2405,14 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 09ffa55c6fbad6c4e8ed8b84bd9ef30a, type: 3}
+--- !u!81 &1367559892
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367559883}
+  m_Enabled: 1
 --- !u!1 &1476466583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,7 +2423,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1476466584}
   - component: {fileID: 1476466587}
-  - component: {fileID: 1476466586}
   - component: {fileID: 1476466585}
   m_Layer: 0
   m_Name: Camera
@@ -2455,14 +2458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0
---- !u!81 &1476466586
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476466583}
-  m_Enabled: 1
 --- !u!20 &1476466587
 Camera:
   m_ObjectHideFlags: 0
